@@ -6,6 +6,11 @@ var engine, world;
 var box1,box2,ground,pig;
 var log,box3,box4,pig2,log2;
 var bird,log3,log4;
+var backgroundimg;
+
+function preload(){
+backgroundimg = loadImage("sprites/bg.png");
+}
 
 function setup(){
     var canvas = createCanvas(1200,400);
@@ -29,7 +34,7 @@ function setup(){
 }
 
 function draw(){
-    background(0);
+   background(backgroundimg)
     Engine.update(engine);
     // console.log(box2.body.position.x);
     // console.log(box2.body.position.y);
@@ -46,7 +51,7 @@ function draw(){
     bird.display();
     log3.display();
     log4.display();
-    console.log(BaseClass)
+    console.log(BaseClass);
 
     
 }
